@@ -1208,36 +1208,43 @@
         <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
-    <Access Scope="LiteralConstant" UId="21">
-      <Constant>
-        <ConstantType>Bool</ConstantType>
-        <ConstantValue>0</ConstantValue>
-      </Constant>
-    </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="Tag_1" />
+        <Component Name="ROBOT_DATA_DB" />
+        <Component Name="OUTPUT" />
       </Symbol>
     </Access>
-    <Part Name="Contact" UId="23" />
-    <Part Name="Coil" UId="24" />
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="TEMP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="ROBOT_CONV_DB" />
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
   </Parts>
   <Wires>
     <Wire UId="25">
       <Powerrail />
-      <NameCon UId="23" Name="in" />
+      <NameCon UId="24" Name="en" />
     </Wire>
     <Wire UId="26">
       <IdentCon UId="21" />
-      <NameCon UId="23" Name="operand" />
+      <NameCon UId="24" Name="SRCBLK" />
     </Wire>
     <Wire UId="27">
-      <NameCon UId="23" Name="out" />
-      <NameCon UId="24" Name="in" />
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
     </Wire>
     <Wire UId="28">
-      <IdentCon UId="22" />
-      <NameCon UId="24" Name="operand" />
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>
@@ -1259,7 +1266,7 @@
               <MultilingualTextItem ID="1B" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>ek1213123</Text>
+                  <Text />
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -1268,7 +1275,48 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource />
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="ROBOT_DATA_DB" />
+        <Component Name="OUTPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="TEMP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="ROBOT_CONV_DB" />
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
@@ -1294,9 +1342,175 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="21" CompositionName="Title">
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="ROBOT_DATA_DB" />
+        <Component Name="OUTPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="TEMP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="ROBOT_CONV_DB" />
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
         <ObjectList>
-          <MultilingualTextItem ID="22" CompositionName="Items">
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="ROBOT_DATA_DB" />
+        <Component Name="OUTPUT" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="TEMP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="ROBOT_CONV_DB" />
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+    <Part Name="BLKMOV" Version="1.1" UId="24">
+      <TemplateValue Name="blk_type" Type="Type">Variant</TemplateValue>
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <Powerrail />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="SRCBLK" />
+    </Wire>
+    <Wire UId="27">
+      <NameCon UId="24" Name="RET_VAL" />
+      <IdentCon UId="22" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="DSTBLK" />
+      <IdentCon UId="23" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="30" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="31" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text />
