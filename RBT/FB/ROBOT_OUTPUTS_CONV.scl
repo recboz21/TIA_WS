@@ -1,0 +1,63 @@
+﻿FUNCTION_BLOCK "ROBOT_OUTPUTS_CONV"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      Input_1 : USInt;
+      Input_2 : USInt;
+      Input_3 : USInt;
+      Input_4 : USInt;
+      Input_5 : USInt;
+      Input_6 : USInt;
+      Input_7 : USInt;
+      Input_8 : USInt;
+      Input_9 : USInt;
+      Input_10 : USInt;
+      Input_11 : USInt;
+      Input_12 : USInt;
+      Input_13 : USInt;
+      Input_14 : USInt;
+      Input_15 : USInt;
+      Input_16 : USInt;
+   END_VAR
+
+   VAR_OUTPUT 
+      o : Array[0..127] of Bool;
+   END_VAR
+
+   VAR 
+      i : Int;
+      a : Int := 1;
+      abc : Int;
+      ARRAY_INPUT : Array[0..15] of USInt;
+   END_VAR
+
+
+BEGIN
+	#ARRAY_INPUT[0] := #Input_1;
+	#ARRAY_INPUT[1] := #Input_2;
+	#ARRAY_INPUT[2] := #Input_3;
+	#ARRAY_INPUT[3] := #Input_4;
+	#ARRAY_INPUT[4] := #Input_5;
+	#ARRAY_INPUT[5] := #Input_6;
+	#ARRAY_INPUT[6] := #Input_7;
+	#ARRAY_INPUT[7] := #Input_8;
+	#ARRAY_INPUT[8] := #Input_9;
+	#ARRAY_INPUT[9] := #Input_10;
+	#ARRAY_INPUT[10] := #Input_11;
+	#ARRAY_INPUT[11] := #Input_12;
+	#ARRAY_INPUT[12] := #Input_13;
+	#ARRAY_INPUT[13] := #Input_14;
+	#ARRAY_INPUT[14] := #Input_15;
+	#ARRAY_INPUT[15] := #Input_16;
+	
+	
+	FOR #abc := 0 TO 15 DO
+	    FOR #i := 0 TO 7 DO
+	        #o[#abc * 8+#i] := (#ARRAY_INPUT[#abc] AND SHL(IN := #a, N := #i)) <> 0;
+	    END_FOR;
+	    
+	END_FOR;
+	
+	
+END_FUNCTION_BLOCK
+

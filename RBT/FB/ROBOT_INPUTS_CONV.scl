@@ -1,0 +1,65 @@
+﻿FUNCTION_BLOCK "ROBOT_INPUTS_CONV"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      plc_ouput_to_robot : Array[0..127] of Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      robot_input_0 : USInt;
+      robot_input_1 : USInt;
+      robot_input_2 : USInt;
+      robot_input_3 : USInt;
+      robot_input_4 : USInt;
+      robot_input_5 : USInt;
+      robot_input_6 : USInt;
+      robot_input_7 : USInt;
+      robot_input_8 : USInt;
+      robot_input_9 : USInt;
+      robot_input_10 : USInt;
+      robot_input_11 : USInt;
+      robot_input_12 : USInt;
+      robot_input_13 : USInt;
+      robot_input_14 : USInt;
+      robot_input_15 : USInt;
+   END_VAR
+
+   VAR 
+      i : Int;
+      j : Int;
+      a : Int := 1;
+      ARRAY_OUTPUT : Array[0..15] of USInt;
+   END_VAR
+
+
+BEGIN
+	
+	
+	FOR #i := 0 TO 15 DO
+	    #ARRAY_OUTPUT[#i] := 0;
+	    FOR #j := 0 TO 7 DO
+	        IF #plc_ouput_to_robot[#i * 8 + #j] THEN
+	            #ARRAY_OUTPUT[#i] := #ARRAY_OUTPUT[#i] OR SHL(IN := #a, N := #j);
+	        END_IF;
+	    END_FOR;
+	END_FOR;
+	
+	#robot_input_0 := #ARRAY_OUTPUT[0];
+	#robot_input_1 := #ARRAY_OUTPUT[1];
+	#robot_input_2 := #ARRAY_OUTPUT[2];
+	#robot_input_3 := #ARRAY_OUTPUT[3];
+	#robot_input_4 := #ARRAY_OUTPUT[4];
+	#robot_input_5 := #ARRAY_OUTPUT[5];
+	#robot_input_6 := #ARRAY_OUTPUT[6];
+	#robot_input_7 := #ARRAY_OUTPUT[7];
+	#robot_input_8 := #ARRAY_OUTPUT[8];
+	#robot_input_9 := #ARRAY_OUTPUT[9];
+	#robot_input_10 := #ARRAY_OUTPUT[10];
+	#robot_input_11 := #ARRAY_OUTPUT[11];
+	#robot_input_12 := #ARRAY_OUTPUT[12];
+	#robot_input_13 := #ARRAY_OUTPUT[13];
+	#robot_input_14 := #ARRAY_OUTPUT[14];
+	#robot_input_15 := #ARRAY_OUTPUT[15];
+	
+END_FUNCTION_BLOCK
+

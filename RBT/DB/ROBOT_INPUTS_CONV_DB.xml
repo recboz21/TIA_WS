@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>ROBOT_INPUTS_CONV</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="plc_ouput_to_robot" Datatype="Array[0..127] of Bool" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="robot_input_0" Datatype="USInt" />
+    <Member Name="robot_input_1" Datatype="USInt" />
+    <Member Name="robot_input_2" Datatype="USInt" />
+    <Member Name="robot_input_3" Datatype="USInt" />
+    <Member Name="robot_input_4" Datatype="USInt" />
+    <Member Name="robot_input_5" Datatype="USInt" />
+    <Member Name="robot_input_6" Datatype="USInt" />
+    <Member Name="robot_input_7" Datatype="USInt" />
+    <Member Name="robot_input_8" Datatype="USInt" />
+    <Member Name="robot_input_9" Datatype="USInt" />
+    <Member Name="robot_input_10" Datatype="USInt" />
+    <Member Name="robot_input_11" Datatype="USInt" />
+    <Member Name="robot_input_12" Datatype="USInt" />
+    <Member Name="robot_input_13" Datatype="USInt" />
+    <Member Name="robot_input_14" Datatype="USInt" />
+    <Member Name="robot_input_15" Datatype="USInt" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="i" Datatype="Int" />
+    <Member Name="j" Datatype="Int" />
+    <Member Name="a" Datatype="Int" />
+    <Member Name="ARRAY_OUTPUT" Datatype="Array[0..15] of USInt" />
+  </Section>
+</Sections></Interface>
+      <Name>ROBOT_INPUTS_CONV_DB</Name>
+      <Namespace />
+      <Number>8</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

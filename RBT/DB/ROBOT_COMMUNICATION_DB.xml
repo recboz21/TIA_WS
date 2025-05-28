@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="adapters" Datatype="Array[0..0] of &quot;LCCF_typeEnetAdaptConfig_1&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="address" Datatype="IP_V4" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ADDR" Datatype="Array[1..4] of Byte">
+                  <Subelement Path="0,1">
+                    <StartValue>192</StartValue>
+                  </Subelement>
+                  <Subelement Path="0,2">
+                    <StartValue>168</StartValue>
+                  </Subelement>
+                  <Subelement Path="0,3">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="0,4">
+                    <StartValue>10</StartValue>
+                  </Subelement>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="vendorIdentifier" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>356</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="productType" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>12</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="productCode" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>2</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="revisionMajor" Datatype="USInt">
+            <Subelement Path="0">
+              <StartValue>2</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="revisionMinor" Datatype="USInt">
+            <Subelement Path="0">
+              <StartValue>2</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="assemblyInstance" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>100</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="packetInterval" Datatype="Time">
+            <Subelement Path="0">
+              <StartValue>T#32ms</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="conPointOutputIdentifier" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>153</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="conPointOutputSize" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>16</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="conPointInputIdentifier" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>103</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="conPointInputSize" Datatype="UInt">
+            <Subelement Path="0">
+              <StartValue>16</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="datas" Datatype="Array[0..0] of &quot;LCCF_typeEnetAdaptData_1&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="connection_OK" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="connection_ERROR" Datatype="Bool" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>ROBOT_COMMUNICATION_DB</Name>
+      <Namespace />
+      <Number>2</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
